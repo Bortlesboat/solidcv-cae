@@ -1,0 +1,28 @@
+[package]
+name = "solidcv-cae"
+version = "0.1.0"
+edition = "2021"
+authors = ["Andy Norris <andy@solidsf.com>", "solidSF <engineering@solidsf.com>"]
+license = "Apache-2.0"
+repository = "https://github.com/solidsf-inc/solidcv-cae"
+homepage = "https://github.com/solidsf-inc/solidcv-cae"
+description = "Pure-Rust Video-to-CAE & Physics Analysis Engine: 3D Digital Image Correlation (3D-DIC) Green-Lagrange strain & Cauchy stress tensors, Eulerian phase-based Operational Modal Analysis (OMA), conformal C3D4/C3D10 tetrahedral FEA & symplectic Newmark-beta solver, Worldtube Navier-Stokes & BOS Schlieren CFD, Virtual Fields Method (VFM) inverse material identification, J-integral fracture & fatigue, Abaqus/CalculiX .inp + VTK .vtk/.vtu + vertex-colored .glb export, and CAE Mechanistic Interpretability powered by Apple Silicon NEON/Metal 3.1 and NVIDIA Grace-Blackwell GB300/GB10 Tensor Cores."
+keywords = ["cae", "fea", "cfd", "digital-image-correlation", "modal-analysis"]
+categories = ["science", "simulation", "computer-vision", "mathematics", "hardware-support"]
+
+[workspace]
+
+[features]
+default = ["dic", "modal", "fea", "cfd", "inverse", "thermal_fracture", "export", "mechinterp"]
+dic = []
+modal = []
+fea = []
+cfd = []
+inverse = []
+thermal_fracture = []
+export = []
+mechinterp = []
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
